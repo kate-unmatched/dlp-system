@@ -3,3 +3,9 @@ dearpygui
 annotated-types
 numpy
 pillow
+sqlmodel
+alembic
+psycopg2-binary
+python-dotenv
+bcrypt
+dearpygui

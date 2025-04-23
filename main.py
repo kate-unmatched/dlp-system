@@ -15,6 +15,7 @@ settings.load_settings()
 
 def main():
     import gui
+    init_db()
     main_widow = gui.MainWindow()
     dpg.set_primary_window(main_widow.window, True)
 
