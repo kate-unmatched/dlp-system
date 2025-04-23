@@ -6,6 +6,8 @@ import DearPyGui_Theme as dpg_theme
 import fonts
 import settings
 
+from  models.db import init_db
+
 dpg.create_context()
 dpg_dnd.initialize()
 dpg.bind_theme(dpg_theme.initialize())
