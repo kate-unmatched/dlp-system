@@ -6,7 +6,8 @@ import DearPyGui_Theme as dpg_theme
 import fonts
 import settings
 
-from  models.db import init_db
+from models.db import init_db, SessionLocal
+from models.user_behavior import UserBehavior
 
 dpg.create_context()
 dpg_dnd.initialize()
@@ -17,9 +18,21 @@ settings.load_settings()
 
 def main():
     import gui
-    init_db()
     main_widow = gui.MainWindow()
     dpg.set_primary_window(main_widow.window, True)
+    init_db()
+    db = SessionLocal()
+    new_behavior = UserBehavior(
+        user_id="user42",
+        feature_vector="[0.5, 0.8, 0.1]",
+        danger_level=4
+    )
+
+    db.add(new_behavior)
+    db.commit()
+    db.close()
+
+    print("✅ Новая запись добавлена в таблицу user_behavior.")
 
 
 dpg.set_frame_callback(1, main)

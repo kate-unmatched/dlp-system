@@ -14,3 +14,4 @@ pandas~=2.2.3
 torch~=2.7.0
 pywin32~=310
 scikit-learn~=1.6.1
+SQLAlchemy~=2.0.40
