@@ -1,7 +1,6 @@
 DearPyGui-DragAndDrop
 dearpygui~=2.0.0
 annotated-types~=0.7.0
-numpy~=2.2.5
 pillow~=11.2.1
 sqlmodel~=0.0.24
 alembic
@@ -13,6 +12,12 @@ dotenv~=0.9.9
 pandas~=2.2.3
 torch~=2.7.0
 pywin32~=310
-scikit-learn~=1.6.1
 SQLAlchemy~=2.0.40
 Flask~=3.1.0
+
+tensorflow==2.10.0
+numpy==1.23.5
+scikit-learn==1.0.2
+
+matplotlib~=3.10.1
+requests~=2.32.3
